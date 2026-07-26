@@ -105,13 +105,13 @@ flowchart TD
     end
 
 
-# 🛡️ AI Behavioral Anomaly Detection for Cybersecurity
+## AI Behavioral Anomaly Detection for Cybersecurity
 
 An end-to-end Machine Learning powered cybersecurity system that detects anomalous user login behavior using Behavioral Profiling, Risk Scoring, Explainable AI (SHAP & LIME), and an interactive Streamlit Dashboard.
 
 ---
 
-# 📌 Project Workflow
+## Project Workflow
 
 ```
 Raw Data Generation
@@ -150,7 +150,7 @@ Real-Time Anomaly Prediction
 
 ---
 
-# 💻 Technology Stack
+## Technology Stack
 
 ## Programming Language
 - Python 3.11+
@@ -182,7 +182,7 @@ Real-Time Anomaly Prediction
 
 ---
 
-# 📂 Dataset Specifications
+# Dataset Specifications
 
 Since publicly available datasets do not fully capture organization-specific behavioral patterns, a realistic synthetic dataset was generated.
 
@@ -198,7 +198,7 @@ Since publicly available datasets do not fully capture organization-specific beh
 
 ---
 
-# 🚨 Simulated Threat Vectors
+# Simulated Threat Vectors
 
 The synthetic dataset contains multiple real-world cybersecurity attack scenarios.
 
@@ -213,7 +213,7 @@ The synthetic dataset contains multiple real-world cybersecurity attack scenario
 
 ---
 
-# 📊 Dataset Feature Schema
+# Dataset Feature Schema
 
 | Feature | Description |
 |----------|-------------|
@@ -235,7 +235,7 @@ The synthetic dataset contains multiple real-world cybersecurity attack scenario
 
 ---
 
-# ⚠️ Risk Scoring Mechanism
+# Risk Scoring Mechanism
 
 Behavioral risk is calculated by comparing each login event against the user's historical profile.
 
@@ -255,7 +255,7 @@ Higher scores indicate a greater probability of malicious behavior.
 
 ---
 
-# 🎯 Evaluated Risk Factors & Weight Distribution
+# Evaluated Risk Factors & Weight Distribution
 
 | Risk Factor | Weight |
 |--------------|--------|
@@ -270,7 +270,7 @@ Maximum Possible Risk Score: **115**
 
 ---
 
-# 🤖 Machine Learning Models
+# Machine Learning Models
 
 Three different models were trained and evaluated.
 
@@ -300,7 +300,7 @@ Three different models were trained and evaluated.
 
 ---
 
-# 📈 Model Performance Comparison
+# Model Performance Comparison
 
 | Model | Accuracy | Precision | Recall | F1 Score | ROC-AUC |
 |--------|-----------|-----------|---------|----------|----------|
@@ -318,7 +318,7 @@ Three different models were trained and evaluated.
 
 ---
 
-# 🧠 Explainable AI (XAI) Integration
+# Explainable AI (XAI) Integration
 
 To improve transparency and trust, Explainable AI techniques are integrated.
 
@@ -342,7 +342,7 @@ Provides:
 
 ---
 
-# 📊 Dashboard & Visualization
+# Dashboard & Visualization
 
 The project includes a modern Streamlit dashboard.
 
@@ -405,7 +405,7 @@ Real-time prediction interface with:
 
 ---
 
-# 📁 Project Structure
+# Project Structure
 
 ```
 AI_Behavioral_Anomaly_Detection/
@@ -436,7 +436,7 @@ AI_Behavioral_Anomaly_Detection/
 
 ---
 
-# 🎯 Future Enhancements
+# Future Enhancements
 
 - Real-time SIEM Integration
 - Live Network Traffic Monitoring
