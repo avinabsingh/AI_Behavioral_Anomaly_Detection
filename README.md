@@ -25,7 +25,6 @@
 - [Screenshots & Visuals](#-screenshots--visuals)
 - [Project Highlights](#-project-highlights)
 - [Future Roadmap](#-future-roadmap)
-- [License](#-license)
 - [Authors & Maintainers](#-authors--maintainers)
 - [Acknowledgements](#-acknowledgements)
 
@@ -494,5 +493,30 @@ AI_Behavioral_Anomaly_Detection/
 - Automated Incident Response
 
 
+---
 
+## Authors & Maintainers
+
+**Avinab Singh**
+- B.Tech CSE, VIT Chennai
+- GitHub: https://github.com/avinabsingh
+- LinkedIn: https://www.linkedin.com/in/avinabsingh/
+
+---
+
+## Acknowledgements
+
+Special thanks to the open-source community and the developers of the following technologies and libraries that made this project possible:
+
+- Python
+- Streamlit
+- Scikit-learn
+- XGBoost
+- TensorFlow/Keras
+- SHAP
+- LIME
+- Pandas
+- NumPy
+- Matplotlib
+- Plotly
 
