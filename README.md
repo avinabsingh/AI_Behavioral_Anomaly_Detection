@@ -105,4 +105,326 @@ flowchart TD
     end
 
 
+# AI Behavioral Anomaly Detection for Cybersecurity
+
+An end-to-end Machine Learning powered cybersecurity system that detects anomalous user login behavior using Behavioral Profiling, Risk Scoring, Explainable AI (SHAP & LIME), and an interactive Streamlit Dashboard.
+
+---
+
+## Project Workflow
+
+```text
+Raw Data Generation
+        |
+        v
+Data Validation & Quality Checks
+        |
+        v
+Exploratory Data Analysis (EDA)
+        |
+        v
+Feature Engineering
+        |
+        v
+Behavioral Profile Generation
+        |
+        v
+Risk Score Calculation
+        |
+        v
+Model Training (Random Forest, XGBoost, LSTM)
+        |
+        v
+Model Evaluation
+        |
+        v
+Explainable AI (SHAP & LIME)
+        |
+        v
+Interactive Streamlit Dashboard
+        |
+        v
+Real-Time Anomaly Prediction
+```
+
+---
+
+## Technology Stack
+
+### Programming Language
+- Python 3.11+
+
+### Machine Learning
+- Scikit-learn
+- XGBoost
+- TensorFlow / Keras
+
+### Explainable AI
+- SHAP
+- LIME
+
+### Data Processing
+- Pandas
+- NumPy
+
+### Visualization
+- Matplotlib
+- Plotly
+- Streamlit
+
+### Model Persistence
+- Joblib
+
+### Development Environment
+- Jupyter Notebook
+- VS Code
+
+---
+
+## Dataset Specifications
+
+Since publicly available datasets do not fully capture organization-specific behavioral patterns, a realistic synthetic dataset was generated.
+
+| Property | Value |
+|-----------|-------|
+| Total Login Events | 10,000 |
+| Normal Events | 9,700 |
+| Anomalies | 300 |
+| Anomaly Ratio | 3% |
+| Users | Multiple simulated users |
+| Dataset Type | Synthetic |
+| Data Format | CSV |
+
+---
+
+## Simulated Threat Vectors
+
+The synthetic dataset contains multiple real-world cybersecurity attack scenarios.
+
+| Threat | Description |
+|----------|-------------|
+| Brute Force Attack | Multiple failed login attempts |
+| Credential Stuffing | Stolen credentials used for authentication |
+| Impossible Travel | Login from geographically impossible locations |
+| Device Spoofing | Login from an unknown device fingerprint |
+| Lateral Movement | Access to unusual internal resources |
+| Data Exfiltration | Abnormally long sessions accessing sensitive resources |
+
+---
+
+## Dataset Feature Schema
+
+| Feature | Description |
+|----------|-------------|
+| entity_id | Unique user identifier |
+| entity_type | Employee, Admin, Contractor, Service Account |
+| geo_location | User login country/location |
+| auth_method | Password, MFA, Biometric, OAuth |
+| resource_accessed | System resource being accessed |
+| session_duration | Login session duration (seconds) |
+| login_status | Success / Failed |
+| protocol | HTTPS, SSH, FTP, HTTP |
+| device_fingerprint | Unique registered device |
+| hour | Login hour |
+| day | Day of month |
+| month | Month |
+| weekday | Day of week |
+| label | Normal / Anomaly |
+| anomaly_type | Type of simulated cyber attack |
+
+---
+
+## Risk Scoring Mechanism
+
+Behavioral risk is calculated by comparing each login event against the user's historical profile.
+
+Each suspicious activity increases the cumulative risk score.
+
+```text
+Final Risk Score = 
+  Country Risk 
++ Authentication Risk 
++ Protocol Risk 
++ Resource Risk 
++ Device Risk 
++ Session Duration Risk
+```
+
+Higher scores indicate a greater probability of malicious behavior.
+
+---
+
+## Evaluated Risk Factors & Weight Distribution
+
+| Risk Factor | Weight |
+|--------------|--------|
+| Unknown Geo Location | +30 |
+| Unknown Device | +25 |
+| Long Session Duration | +20 |
+| Authentication Method Change | +15 |
+| Sensitive Resource Access | +15 |
+| Suspicious Network Protocol | +10 |
+
+Maximum Possible Risk Score: **115**
+
+---
+
+## Machine Learning Models
+
+Three different models were trained and evaluated.
+
+### 1. Random Forest
+- Ensemble Learning
+- Handles mixed feature types
+- Robust against overfitting
+- High interpretability
+
+### 2. XGBoost
+- Gradient Boosted Decision Trees
+- Excellent predictive performance
+- Fast inference
+- Strong handling of nonlinear relationships
+
+### 3. LSTM Neural Network
+- Deep Learning model
+- Learns sequential behavioral patterns
+- Suitable for temporal login analysis
+
+---
+
+## Model Performance Comparison
+
+| Model | Accuracy | Precision | Recall | F1 Score | ROC-AUC |
+|--------|-----------|-----------|---------|----------|----------|
+| Random Forest | **98.95%** | 98.93% | 100.00% | 99.46% | **97.15%** |
+| XGBoost | **99.05%** | **99.18%** | 99.85% | **99.51%** | 95.22% |
+| LSTM | 90.00% | 98.88% | 90.72% | 94.62% | 86.36% |
+
+### Best Performing Model
+**Random Forest** was selected for deployment due to its excellent balance of:
+- High accuracy
+- Fast prediction time
+- Robustness
+- Better interpretability
+
+---
+
+## Explainable AI (XAI) Integration
+
+To improve transparency and trust, Explainable AI techniques are integrated.
+
+### SHAP (SHapley Additive Explanations)
+Provides:
+- Global feature importance
+- Local prediction explanations
+- Feature contribution analysis
+- SHAP Summary Plot
+- SHAP Bar Plot
+
+### LIME (Local Interpretable Model-Agnostic Explanations)
+Provides:
+- Instance-level prediction explanations
+- Human-readable decision reasoning
+- Feature contribution visualization
+
+---
+
+## Dashboard & Visualization
+
+The project includes a modern Streamlit dashboard.
+
+### Home Dashboard
+- Dataset Overview
+- KPI Cards
+- Attack Distribution
+- Model Performance Comparison
+- Interactive Charts
+
+### Risk Analysis
+- Highest Risk Events
+- Average Risk Score
+- Lowest Risk Score
+- Risk Distribution
+- Top High-Risk Login Attempts
+
+### Explainability
+- SHAP Summary Plot
+- SHAP Feature Importance
+- LIME Explanation Report
+
+### Live Prediction
+Real-time prediction interface with:
+- User Login Simulation
+- Behavioral Risk Prediction
+- Confidence Score
+- Risk Level
+- AI Explanation
+- Security Recommendation
+- Login Summary
+- Feature Risk Analysis
+- Interactive Visualization
+
+---
+
+## Key Features
+
+- Synthetic Cybersecurity Dataset Generation
+- Behavioral User Profiling
+- Dynamic Risk Scoring
+- Machine Learning-Based Detection
+- Explainable AI Integration
+- Interactive Dashboard
+- Real-Time Login Prediction
+- Security Recommendations
+- Feature Importance Visualization
+- Professional UI with Streamlit
+
+---
+
+## Project Structure
+
+```text
+AI_Behavioral_Anomaly_Detection/
+|
+|-- data/
+|   |-- raw/
+|   |-- processed/
+|   |-- synthetic/
+|
+|-- dashboard/
+|   |-- app.py
+|   |-- assets/
+|   |-- pages/
+|
+|-- models/
+|
+|-- notebooks/
+|
+|-- reports/
+|   |-- explainability/
+|   |-- evaluation/
+|   |-- data_quality/
+|
+|-- src/
+|
+|-- README.md
+```
+
+---
+
+## Future Enhancements
+
+- Real-time SIEM Integration
+- Live Network Traffic Monitoring
+- Kafka-based Streaming Pipeline
+- Graph Neural Networks (GNN)
+- Online Learning Models
+- User Behavior Analytics (UBA)
+- Cloud Deployment (AWS/Azure/GCP)
+- Multi-Factor Risk Engine
+- Threat Intelligence Integration
+- Automated Incident Response
+
+
+
 
