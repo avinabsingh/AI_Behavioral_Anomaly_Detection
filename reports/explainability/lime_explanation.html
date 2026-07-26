@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_div2UBCLRXE2X55O0U"></div>
+        <div class="lime top_div" id="top_divFKLKE4IS8WPJ3HT"></div>
         
         <script>
-        var top_div = d3.select('#top_div2UBCLRXE2X55O0U').classed('lime top_div', true);
+        var top_div = d3.select('#top_divFKLKE4IS8WPJ3HT').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["Anomaly", "Normal"], [0.0027806212227210235, 0.9972193787772791]);
+            var pp = new lime.PredictProba(pp_svg, ["Anomaly", "Normal"], [0.0006699487794280408, 0.9993300512205721]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["Anomaly", "Normal"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["device_fingerprint > 102.00", -0.04779880184600712], ["session_duration > 5397.00", -0.0464911133479148], ["5.00 < resource_accessed <= 7.00", 0.018337262785393837], ["geo_location > 8.00", 0.011230625517385264], ["entity_id <= 24.00", -0.009792441425916287], ["3.00 < weekday <= 5.00", -0.005000326170830024], ["4.00 < month <= 5.00", -0.004641731518801032], ["1.00 < protocol <= 3.00", 0.00336265528208449], ["14.00 < hour <= 16.00", -0.0027387016549550525], ["auth_method <= 0.75", 0.0020250806630624086]], 1, exp_div);
+                exp.show([["896.00 < session_duration <= 1106.00", 0.07666123739546189], ["resource_accessed <= 3.00", -0.017338857873616068], ["protocol <= 0.00", 0.010736471095114056], ["geo_location > 8.00", 0.008376372892635438], ["1.00 < entity_type <= 2.00", 0.00594216431142529], ["15.00 < day <= 23.00", 0.003383854982118111], ["94.00 < device_fingerprint <= 150.00", 0.0033322294950348295], ["49.00 < entity_id <= 75.00", -0.0026071619549370858], ["hour > 15.00", -0.002035775620049512], ["4.00 < month <= 5.00", 0.0011764901019738776]], 1, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_tabular([["device_fingerprint", "114.00", -0.04779880184600712], ["session_duration", "5873.00", -0.0464911133479148], ["resource_accessed", "6.00", 0.018337262785393837], ["geo_location", "9.00", 0.011230625517385264], ["entity_id", "19.00", -0.009792441425916287], ["weekday", "4.00", -0.005000326170830024], ["month", "5.00", -0.004641731518801032], ["protocol", "2.00", 0.00336265528208449], ["hour", "16.00", -0.0027387016549550525], ["auth_method", "0.00", 0.0020250806630624086]], 1, raw_div);
+            exp.show_raw_tabular([["session_duration", "915.00", 0.07666123739546189], ["resource_accessed", "2.00", -0.017338857873616068], ["protocol", "0.00", 0.010736471095114056], ["geo_location", "9.00", 0.008376372892635438], ["entity_type", "2.00", 0.00594216431142529], ["day", "23.00", 0.003383854982118111], ["device_fingerprint", "139.00", 0.0033322294950348295], ["entity_id", "70.00", -0.0026071619549370858], ["hour", "18.00", -0.002035775620049512], ["month", "5.00", 0.0011764901019738776]], 1, raw_div);
         
         </script>
         </body></html>

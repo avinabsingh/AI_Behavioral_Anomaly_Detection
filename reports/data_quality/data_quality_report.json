@@ -25,11 +25,11 @@
     },
     "Attack Distribution": {
         "Normal": 9700,
-        "Credential Stuffing": 66,
-        "Data Exfiltration": 62,
-        "Impossible Travel": 52,
-        "Device Spoofing": 45,
+        "Credential Stuffing": 61,
+        "Data Exfiltration": 57,
+        "Impossible Travel": 55,
+        "Device Spoofing": 47,
         "Brute Force": 41,
-        "Lateral Movement": 34
+        "Lateral Movement": 39
     }
 }
