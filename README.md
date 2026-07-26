@@ -381,7 +381,7 @@ Real-time prediction interface with:
 - Professional UI with Streamlit
 
 ---
-# 📸 Dashboard Preview
+# Dashboard Preview
 
 ![Dashboard](screenshots/Dashboard.png)
 
@@ -413,7 +413,7 @@ Real-time prediction interface with:
 
 ---
 
-# 🧠 Explainable AI Dashboard
+# Explainable AI Dashboard
 
 ### Explainability - Part 1
 ![Explain Part 1](screenshots/Explain_Part1.png)
