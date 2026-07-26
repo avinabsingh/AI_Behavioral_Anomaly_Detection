@@ -381,7 +381,74 @@ Real-time prediction interface with:
 - Professional UI with Streamlit
 
 ---
+# 📸 Dashboard Preview
 
+![Dashboard](screenshots/Dashboard.png)
+
+---
+
+# 🏠 Home Dashboard
+
+### About - Part 1
+![About Part 1](screenshots/About_Part1.png)
+
+### About - Part 2
+![About Part 2](screenshots/About_Part2.png)
+
+### About - Part 3
+![About Part 3](screenshots/About_Part3.png)
+
+### About - Part 4
+![About Part 4](screenshots/About_Part4.png)
+
+---
+
+# 📈 Risk Analysis Dashboard
+
+### Risk Analysis - Part 1
+![Risk Analysis Part 1](screenshots/RiskAnalysis_Part1.png)
+
+### Risk Analysis - Part 2
+![Risk Analysis Part 2](screenshots/RiskAnalysis_Part2.png)
+
+---
+
+# 🧠 Explainable AI Dashboard
+
+### Explainability - Part 1
+![Explain Part 1](screenshots/Explain_Part1.png)
+
+### Explainability - Part 2
+![Explain Part 2](screenshots/Explain_Part2.png)
+
+### Explainability - Part 3
+![Explain Part 3](screenshots/Explain_Part3.png)
+
+### Explainability - Part 4
+![Explain Part 4](screenshots/Explain_Part4.png)
+
+---
+
+# 🤖 Live Prediction Dashboard
+
+### Live Prediction - Part 1
+![Live Prediction Part 1](screenshots/LivePrediction_Part1.png)
+
+### Live Prediction - Part 2
+![Live Prediction Part 2](screenshots/LivePrediction_Part2.png)
+
+### Live Prediction - Part 3
+![Live Prediction Part 3](screenshots/LivePrediction_Part3.png)
+
+### Live Prediction - Part 4
+![Live Prediction Part 4](screenshots/LivePrediction_Part4.png)
+
+### Live Prediction - Part 5
+![Live Prediction Part 5](screenshots/LivePrediction_Part5.png)
+
+
+
+---
 ## Project Structure
 
 ```text
