@@ -387,7 +387,7 @@ Real-time prediction interface with:
 
 ---
 
-# 🏠 Home Dashboard
+# Home Dashboard
 
 ### About - Part 1
 ![About Part 1](screenshots/About_Part1.png)
@@ -403,7 +403,7 @@ Real-time prediction interface with:
 
 ---
 
-# 📈 Risk Analysis Dashboard
+# Risk Analysis Dashboard
 
 ### Risk Analysis - Part 1
 ![Risk Analysis Part 1](screenshots/RiskAnalysis_Part1.png)
@@ -429,7 +429,7 @@ Real-time prediction interface with:
 
 ---
 
-# 🤖 Live Prediction Dashboard
+# Live Prediction Dashboard
 
 ### Live Prediction - Part 1
 ![Live Prediction Part 1](screenshots/LivePrediction_Part1.png)
