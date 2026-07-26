@@ -1,0 +1,35 @@
+{
+    "Rows": 10000,
+    "Columns": 14,
+    "Duplicate Rows": 0,
+    "Unique Users": 100,
+    "Missing Values": {
+        "entity_id": 0,
+        "entity_type": 0,
+        "timestamp": 0,
+        "source_ip": 0,
+        "geo_location": 0,
+        "resource_accessed": 0,
+        "auth_method": 0,
+        "session_duration": 0,
+        "login_status": 0,
+        "command_sequence": 0,
+        "device_fingerprint": 0,
+        "protocol": 0,
+        "label": 0,
+        "anomaly_type": 0
+    },
+    "Label Distribution": {
+        "Normal": 9700,
+        "Anomaly": 300
+    },
+    "Attack Distribution": {
+        "Normal": 9700,
+        "Credential Stuffing": 66,
+        "Data Exfiltration": 62,
+        "Impossible Travel": 52,
+        "Device Spoofing": 45,
+        "Brute Force": 41,
+        "Lateral Movement": 34
+    }
+}
