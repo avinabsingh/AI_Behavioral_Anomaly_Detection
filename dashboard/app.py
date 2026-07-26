@@ -2,11 +2,29 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 
+from pathlib import Path
+
+
+
 st.set_page_config(
     page_title="AI Behavioral Anomaly Detection",
-    page_icon="🛡️",
+    page_icon="",
     layout="wide"
 )
+
+def load_css():
+    css_path = Path(__file__).parent / "assets" / "style.css"
+
+    if not css_path.exists():
+        css_path = Path(__file__).parent.parent / "assets" / "style.css"
+
+    with open(css_path) as f:
+        st.markdown(
+            f"<style>{f.read()}</style>",
+            unsafe_allow_html=True
+        )
+
+load_css()
 
 # -----------------------------
 # Sidebar
@@ -48,15 +66,40 @@ st.sidebar.markdown("---")
 
 st.sidebar.write("Version 1.0")
 
-st.title("AI Behavioral Anomaly Detection System")
+st.markdown("""
+<div class="hero-banner">
+
+<h1 class="hero-title">
+🛡 AI Behavioral Anomaly Detection
+</h1>
+
+<p style="font-size:18px;">
+Real-time Cybersecurity Monitoring using Machine Learning,
+Behavioral Profiling, Risk Scoring, SHAP and LIME
+</p>
+
+</div>
+""", unsafe_allow_html=True)
 
 st.markdown("---")
 
-st.header("Project Overview")
+st.markdown(
+"""
+<div class="glass-card">
+
+<h2>Project Overview</h2>
+
+<p>
+This project detects abnormal login behavior using Machine Learning,
+Behavioral Profiling, Risk Scoring and Explainable AI.
+</p>
+
+</div>
+""",
+unsafe_allow_html=True
+)
 
 st.write("""
-This project detects abnormal user behavior using Machine Learning.
-
 ### Models Used
 - Random Forest
 - XGBoost
@@ -75,24 +118,57 @@ This project detects abnormal user behavior using Machine Learning.
 
 st.markdown("---")
 
-st.header("📊 Dataset Statistics")
+st.markdown(
+"""
+<div class="section-title">
+Dataset Statistics
+</div>
+""",
+unsafe_allow_html=True
+)
 
 df = pd.read_csv("data/processed/features.csv")
 
-col1, col2, col3 = st.columns(3)
+total_events = len(df)
 
-with col1:
-    st.metric("Total Events", len(df))
+normal_events = (df["label"] == "Normal").sum()
 
-with col2:
-    st.metric("Normal Events", (df["label"] == 1).sum())
+anomalies = (df["label"] == "Anomaly").sum()
 
-with col3:
-    st.metric("Anomalies", (df["label"] == 0).sum())
+# If risk_score exists use its average
+if "risk_score" in df.columns:
+    avg_risk = df["risk_score"].mean()
+else:
+    avg_risk = 0
+
+col1, col2, col3, col4 = st.columns(4)
+
+cards = [
+    ("Total Events", total_events),
+    ("Normal", normal_events),
+    ("Anomalies", anomalies),
+    ("Avg Risk", round(avg_risk, 2))
+]
+
+for col, (label, value) in zip((col1, col2, col3, col4), cards):
+    with col:
+        st.markdown(f"""
+        <div class="glass-card metric-card">
+            <p class="metric-label">{label}</p>
+            <p class="metric-value">{value}</p>
+        </div>
+        """, unsafe_allow_html=True)
 
 st.markdown("---")
 
-st.header("📈 Data Visualizations")
+st.markdown(
+"""
+<div class="section-title">
+Data Visualizations
+</div>
+""",
+unsafe_allow_html=True
+)
 
 col1, col2 = st.columns(2)
 
@@ -135,7 +211,14 @@ with col2:
 
 st.markdown("---")
 
-st.header("🤖 Model Performance Comparison")
+st.markdown(
+"""
+<div class="section-title">
+Model Performance
+</div>
+""",
+unsafe_allow_html=True
+)
 
 performance = pd.DataFrame({
     "Model": ["Random Forest", "XGBoost", "LSTM"],
@@ -165,6 +248,14 @@ st.success("Dashboard Loaded Successfully!")
 
 st.markdown("---")
 
-st.caption(
-    "AI Behavioral Anomaly Detection System | Developed using Streamlit, Scikit-learn, TensorFlow, XGBoost, SHAP, and LIME"
-)
+st.markdown("""
+<div class="footer">
+
+AI Behavioral Anomaly Detection System
+
+Version 1.0
+
+Built with Python • Streamlit • XGBoost • TensorFlow • SHAP • LIME
+
+</div>
+""", unsafe_allow_html=True)

@@ -2,7 +2,23 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-st.set_page_config(page_title="Risk Analysis", page_icon="⚠️")
+from pathlib import Path
+
+def load_css():
+    css_path = Path(__file__).parent / "assets" / "style.css"
+
+    if not css_path.exists():
+        css_path = Path(__file__).parent.parent / "assets" / "style.css"
+
+    with open(css_path) as f:
+        st.markdown(
+            f"<style>{f.read()}</style>",
+            unsafe_allow_html=True
+        )
+
+load_css()
+
+st.set_page_config(page_title="Risk Analysis", page_icon="")
 
 st.title("Risk Score Analysis")
 

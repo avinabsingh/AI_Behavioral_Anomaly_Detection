@@ -1,4 +1,19 @@
 import streamlit as st
+from pathlib import Path
+
+def load_css():
+    css_path = Path(__file__).parent / "assets" / "style.css"
+
+    if not css_path.exists():
+        css_path = Path(__file__).parent.parent / "assets" / "style.css"
+
+    with open(css_path) as f:
+        st.markdown(
+            f"<style>{f.read()}</style>",
+            unsafe_allow_html=True
+        )
+
+load_css()
 
 st.set_page_config(page_title="About", page_icon="ℹ")
 
@@ -87,7 +102,7 @@ Live Prediction Dashboard
 
 st.markdown("---")
 
-st.subheader("📂 Download Reports")
+st.subheader("Download Reports")
 
 with open("reports/explainability/lime_explanation.html", "rb") as f:
     st.download_button(
